@@ -77,6 +77,7 @@ public class HVideoPlayer extends JCVideoPlayerStandard {
             public void onClick(View v) {
                 String content = mEditText.getText().toString();
                 mSendListener.sendMsg(content);
+                mEditText.setText("");
             }
         });
 
@@ -219,7 +220,6 @@ public class HVideoPlayer extends JCVideoPlayerStandard {
             danmakuView = null;
         }
     }
-
 
     @Override
     public void setUp(String url, int screen, Object... objects) {
