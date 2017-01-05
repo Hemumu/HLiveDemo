@@ -18,6 +18,7 @@ import com.helin.hlivedemo.view.HVideoPlayer;
 import java.util.ArrayList;
 import java.util.List;
 
+import fm.jiecao.jcvideoplayer_lib.JCUserAction;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
@@ -86,10 +87,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mVideoPlayerStandard.setJcUserAction(new JCUserAction() {
+            @Override
+            public void onEvent(int type, String url, int screen, Object... objects) {
+                switch (type){
+                    case JCVideoPlayer.CURRENT_STATE_PLAYING:
+
+                        break;
+                    case JCVideoPlayer.CURRENT_STATE_PAUSE:
+
+                        break;
+
+                }
+            }
+        });
+
         //rtmp://203.207.99.19:1935/live/CCTV5
         //http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8
         //http://ivi.bupt.edu.cn/hls/cctv1.m3u8
-        mVideoPlayerStandard.setUp("http://pili-live-hls.live.vms.ccsobey.com/ccsobey5/cydst-dtzb.m3u8"
+        mVideoPlayerStandard.setUp("http://ivi.bupt.edu.cn/hls/cctv1.m3u8"
                 , JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "房间名称");
     }
 
