@@ -278,6 +278,7 @@ public class HVideoPlayer extends JCVideoPlayerStandard {
     /**
      * 判断当前是否是全屏
      *
+     *
      * @return
      */
     public boolean isFullScreen() {
@@ -298,6 +299,12 @@ public class HVideoPlayer extends JCVideoPlayerStandard {
         }
     }
 
+
+    @Override
+    public void onVideoSizeChanged() {
+//        super.onVideoSizeChanged();
+
+    }
 
     //全屏事件监听，返回全屏播放器对象
     public void setOnFullScreenListener(OnFullScreenListener onFullScreenListener) {

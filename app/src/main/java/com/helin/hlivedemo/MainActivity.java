@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         //rtmp://203.207.99.19:1935/live/CCTV5
         //http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8
         //http://ivi.bupt.edu.cn/hls/cctv1.m3u8
-        mVideoPlayerStandard.setUp("http://ivi.bupt.edu.cn/hls/cctv1.m3u8"
+        mVideoPlayerStandard.setUp("http://125.88.92.166:30001/PLTV/88888956/224/3221227695/1.m3u8"
                 , JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "房间名称");
     }
 
